@@ -21,3 +21,7 @@ function enableDarkTheme(){
         a.style.background = "white"
     }
 }
+function youCantSeeMore()
+{
+    alert("Não há mais produtos")
+}
