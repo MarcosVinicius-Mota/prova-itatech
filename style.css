@@ -5,7 +5,7 @@ body, html {
     max-width: 100vw;
     padding: 0;
     margin: 0;
-    background-color: black;
+    background-color: white;
     
 }
   
@@ -96,8 +96,47 @@ img{
     right: 20%;
     width: 16%;
     height: 45px;
-    background-color: black;
+    background-color: white;
 
+}
+
+
+#page_title{
+    color: white;
+    display: flex;
+    flex-direction: column; 
+    justify-content: end;
+    background-image: url("imageminicio.jfif");
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    height: 250px;
+}
+
+#titleh1{
+    font-size: 32pt;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    padding: 20px;
+}
+
+#title_text{
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#title_button_div{
+    padding: 20px;
+    width: 120px;
+    height: 35px;
+}
+
+#title_button{
+    background-color: #2A7AE4;
+    color: white;
+    border: 0px;
+    width: 100%;    
+    height: 100%;
 }
 
 @media screen and  (max-width: 500px) {
@@ -127,5 +166,25 @@ img{
     #search_bar{
         visibility: hidden;
     }
+
+    #page_title{
+        height: 230px;
+    }
+
+    #title_button_div{
+        padding: 20px;
+        width: 35%;
+        height: 40px;
+    }
+
+    
+    #titleh1{
+        font-size: 22pt;
+    }
+
+    #title_text{
+        font-size: 11pt;
+    }
+
 
 }
