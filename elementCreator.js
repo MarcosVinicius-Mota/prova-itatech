@@ -1,106 +1,94 @@
-var firstSec = [];
-var secondSec = [];
-var thirdSec = [];
-var src = "skill0";
-var temp = "123456"
 
-for(var i = 0; i < 6; i++){
-    firstSec[i] = {
-        name : "ProdutoXYZ",
-        price : Number.parseFloat(60.0),
-        category: "Star Wars",
-        img : src
-    }
-    src = src.replace(src.charAt(src.length - 1).toString(), temp.charAt(i))
+function createProduct(_name, _category, _price, image_src) {
+    var product = {
+        name : _name,
+        category : _category,
+        price : _price,
+        img : image_src
+    };
+    return product;
 }
 
-src = "section_two0";
-
-for(var i = 0; i < 6; i++){
-    secondSec[i] = {
-        name : "ProdutoXYZ",
-        price : Number.parseFloat(60.0),
-        category: "Consoles",
-        img : src
-    }
-    src = src.replace(src.charAt(src.length - 1).toString(), temp.charAt(i))
+function __appendElements(main_element, child){
+    main_element.appendChild(child);
 }
 
-src = "diversos0";
-
-for(var i = 0; i < 6; i++){
-    thirdSec[i] = {
-        name : "ProdutoXYZ",
-        price : Number.parseFloat(60.0),
-        category: "Diversos",
-        img : src
-    }
-    src = src.replace(src.charAt(src.length - 1).toString(), temp.charAt(i))
+function __updateContentText(element, newText){
+    element.textContent = newText;
 }
 
-//Exibição dos elementos criados na tela
-function appendElements(products, size, element_id){
+function __createElement(element_tag){
+    return document.createElement(element_tag);
+}
 
-    var sec = document.getElementById(element_id);
-    var divs = [];
-    var im = [];
-    var p_name = [];
-    var p_price = [];
-    var see_prod = [];
+function appendElement(element_id, product, is_visible){
+    var section = document.getElementById(element_id);
 
+    product_div   = __createElement("div");
+    product_image = __createElement("img");
+    product_name  = __createElement("p");
+    product_price = __createElement("p");
+    see_more      = __createElement("a");
 
+    __appendElements(section, product_div);
 
-    for(var i = 0; i < size; i++){
-        
-        divs[i] = document.createElement("div");
-        sec.appendChild(divs[i]);
-    }
+    product_image.classList.add("product_image");
+    product_image.setAttribute("src", "images/" + product.img + ".png");
 
-    for(var i = 0; i < size; i++){
+    __updateContentText(see_more, "Ver produto");
+    see_more.setAttribute("href", "index.html");
 
-        im[i] = document.createElement("img");
-        
-        im[i].classList.add("product_image");
-        im[i].setAttribute("src", "images/" + products[i].img + ".png");
-        p_name[i] = document.createElement("p");
-        p_price[i] = document.createElement("p");
-        see_prod[i] = document.createElement("a");
-
-        see_prod[i].textContent = "Ver produto";
-        see_prod[i].setAttribute("href", "index.html");
-        p_name[i].textContent = products[i].name;
-        p_price[i].textContent = products[i].price.toLocaleString('en',{style: 'currency', currency: 'USD'});
-        
-    }
-
-    for(var i = 0; i < size; i++){
-        if(i >= 4){
-            divs[i].classList.add("invisible");
-        }
-        divs[i].classList.add("product_div");
-        p_name[i].style.paddingTop = "12px";
-        p_name[i].style.fontSize = "14pt";
+    __updateContentText(product_name, product.name);
+    __updateContentText(product_price, product.price.toLocaleString('en',{style: 'currency', currency: 'USD'}));
     
-        p_price[i].style.fontWeight = "bold";
-        p_price[i].style.paddingTop = "9px";
-        p_price[i].style.paddingBottom = "9px";
-        
-        divs[i].appendChild(im[i]);
-        divs[i].appendChild(p_name[i]);
-        divs[i].appendChild(p_price[i]);
-        divs[i].appendChild(see_prod[i]);
+    if(!is_visible){
+        product_div.classList.add("invisible");
     }
 
-    for(var i = 0; i < size; i++){
-        sec.appendChild(divs[i]);
-    }
+    product_div.classList.add("product_div");
+    product_name.classList.add("product_name");
+    product_price.classList.add("product_price");
+
+    __appendElements(product_div, product_image);
+    __appendElements(product_div, product_name);
+    __appendElements(product_div, product_price);
+    __appendElements(product_div, see_more);
 
 }
 
-document.getElementById("title1").textContent = firstSec[0].category;
-document.getElementById("title2").textContent = secondSec[0].category;
-document.getElementById("title3").textContent = thirdSec[0].category;
+function appendElementArray(element_id, products, size, visibilityCondition){
+    for(var i = 0; i < size; i++){
+        appendElement(element_id, products[i], i < visibilityCondition);
+    }
+}
 
-appendElements(firstSec, firstSec.length, "first_section");
-appendElements(secondSec, secondSec.length, "second_section");
-appendElements(thirdSec, thirdSec.length, "third_section");
+function startElementsGeneric(products, size, name, category, price, image_src){
+    const temp = "123456"
+    for(var i = 0; i < size; i++){
+        products[i] = createProduct(name, category, price ,image_src);
+        image_src = image_src.replace(image_src.charAt(image_src.length - 1).toString(), temp.charAt(i))
+    }
+}
+
+function main(){
+
+    var firstSec = [];
+    var secondSec = [];
+    var thirdSec = [];
+
+
+    startElementsGeneric(firstSec, 6, "ProdutoXYZ", "Star Wars", 60.0, "skill0");
+    __updateContentText(document.getElementById("title1"), "Star Wars");
+
+    startElementsGeneric(secondSec, 6, "ProdutoXYZ", "Consoles", 60.0, "section_two0");
+    __updateContentText(document.getElementById("title2"), "Consoles");
+
+    startElementsGeneric(thirdSec, 6, "ProdutoXYZ", "Diversos", 60.0, "diversos0");
+    __updateContentText(document.getElementById("title3"), "Diversos");
+
+    appendElementArray("first_section", firstSec, 6, 4);
+    appendElementArray("second_section", secondSec, 6, 4);
+    appendElementArray("third_section", thirdSec, 6, 4);
+}
+
+main();

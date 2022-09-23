@@ -116,7 +116,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    background-image: url("imageminicio.jfif");
+    background-image: url("images/hero.jfif");
     background-size: 100%;
     background-position: center;
     width: 100%;
@@ -410,4 +410,14 @@ form {
     border-radius: 1px;
 }
 
+.product_name{
+    padding-top: 12px;
+    font-size: 14pt;
+}
+
+.product_price{
+    font-weight: bold;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
 
