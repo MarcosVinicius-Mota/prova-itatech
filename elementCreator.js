@@ -11,22 +11,22 @@ for(var i = 0; i < 6; i++){
         category: "Star Wars",
         img : src
     }
-    src = src.replace(src.charAt(5).toString(), temp.charAt(i))
+    src = src.replace(src.charAt(src.length - 1).toString(), temp.charAt(i))
 }
 
-src = "skill0";
+src = "section_two0";
 
 for(var i = 0; i < 6; i++){
     secondSec[i] = {
         name : "ProdutoXYZ",
         price : Number.parseFloat(60.0),
-        category: "Consolos",
+        category: "Consoles",
         img : src
     }
-    src = src.replace(src.charAt(5).toString(), temp.charAt(i))
+    src = src.replace(src.charAt(src.length - 1).toString(), temp.charAt(i))
 }
 
-src = "skill0";
+src = "diversos0";
 
 for(var i = 0; i < 6; i++){
     thirdSec[i] = {
@@ -35,7 +35,7 @@ for(var i = 0; i < 6; i++){
         category: "Diversos",
         img : src
     }
-    src = src.replace(src.charAt(5).toString(), temp.charAt(i))
+    src = src.replace(src.charAt(src.length - 1).toString(), temp.charAt(i))
 }
 
 //Exibição dos elementos criados na tela
@@ -46,6 +46,7 @@ function appendElements(products, size, element_id){
     var im = [];
     var p_name = [];
     var p_price = [];
+    var see_prod = [];
 
 
 
@@ -63,7 +64,10 @@ function appendElements(products, size, element_id){
         im[i].setAttribute("src", "images/" + products[i].img + ".png");
         p_name[i] = document.createElement("p");
         p_price[i] = document.createElement("p");
+        see_prod[i] = document.createElement("a");
 
+        see_prod[i].textContent = "Ver produto";
+        see_prod[i].setAttribute("href", "index.html");
         p_name[i].textContent = products[i].name;
         p_price[i].textContent = products[i].price.toLocaleString('en',{style: 'currency', currency: 'USD'});
         
@@ -77,6 +81,7 @@ function appendElements(products, size, element_id){
         divs[i].appendChild(im[i]);
         divs[i].appendChild(p_name[i]);
         divs[i].appendChild(p_price[i]);
+        divs[i].appendChild(see_prod[i]);
     }
 
     for(var i = 0; i < size; i++){

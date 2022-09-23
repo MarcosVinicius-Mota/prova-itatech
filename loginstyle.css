@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#login_div {
+
+    margin-left: 15%;
+    margin-top: 60px;
+    background-color: #E5E5E5;
+    height: 300px;
+    width: 70%;
+    text-align: center;
+}
+
+#box {
+    width: 100%;
+    background-color: #E5E5E5;
+}
+
+
+#user {
+    margin-top: 22px;
+    outline: 0;
+    height: 50px;
+    width: 40%;
+    border: 0px;
+}
+
+#password {
+    margin-top: 22px;
+    align-self: center;
+    outline: 0;
+    height: 50px;
+    width: 40%;
+    border: 0px;
+}
+
+#enter_button {
+    margin-top: 22px;
+    width: 40%;
+    height: 40px;
+    align-self: center;
+    background-color: #2A7AE4;
+    color: white;
+    border: 0;
+}
+
+p {
+    color: #464646;
+}
+
+footer {
+    margin-top: 0%;
+}
+
+@media screen and (max-width: 900px) {
+    #user {
+
+        width: 60%;
+
+    }
+
+    #password {
+
+        width: 60%;
+
+    }
+
+    #enter_button {
+        width: 60%;
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #user {
+
+        width: 80%;
+
+    }
+
+    #password {
+
+        width: 80%;
+
+    }
+
+    #enter_button {
+        width: 80%;
+
+    }
+}
