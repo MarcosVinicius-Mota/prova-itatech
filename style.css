@@ -167,7 +167,7 @@ section {
 @media screen and (max-width: 500px) {
 
     .product_div {
-        padding-bottom: 20px;
+        padding-bottom: 50px;
         width: 45%;
     }
 
@@ -226,6 +226,29 @@ section {
         font-size: 11pt;
     }
 
+    footer{
+        flex-direction: column;
+        min-height: 700px;
+    }
+
+    #services{
+        align-self: center;
+        background-color: #2A7AE4;
+        
+    }
+
+    #send_msg{
+        position: absolute;
+    }
+
+    #footer_logo{
+        align-self: center;
+    }
+
+    .list{
+        width: 50%;
+        padding-left: 25%;
+    }
 
 
 }
@@ -248,11 +271,9 @@ section {
         justify-content: space-between;
     }
 
-
-
-    ul {
+    .list {
         position: absolute;
-        margin-top: 6%;
+        margin-top: 40px;
         left: 5%;
     }
 
@@ -265,13 +286,13 @@ section {
     #send_msg {
         position: absolute;
         padding-left: 45%;
-        margin-top: 35%;
+        padding-top: 200px;
         width: 50%;
     }
 
 
     #send_button {
-        min-width: 50%;
+        min-width: 150px;
     }
 
 
@@ -317,7 +338,8 @@ footer {
 
 }
 
-ul {
+.list {
+    padding-top: 30px;
     list-style: none;
 }
 
@@ -387,3 +409,5 @@ form {
     color: white;
     border-radius: 1px;
 }
+
+

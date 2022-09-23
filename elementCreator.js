@@ -78,6 +78,13 @@ function appendElements(products, size, element_id){
             divs[i].classList.add("invisible");
         }
         divs[i].classList.add("product_div");
+        p_name[i].style.paddingTop = "12px";
+        p_name[i].style.fontSize = "14pt";
+    
+        p_price[i].style.fontWeight = "bold";
+        p_price[i].style.paddingTop = "9px";
+        p_price[i].style.paddingBottom = "9px";
+        
         divs[i].appendChild(im[i]);
         divs[i].appendChild(p_name[i]);
         divs[i].appendChild(p_price[i]);
