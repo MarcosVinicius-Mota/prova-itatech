@@ -55,38 +55,14 @@ footer {
 
 @media screen and (max-width: 900px) {
     #user {
-
         width: 60%;
-
     }
-
     #password {
-
         width: 60%;
-
     }
 
     #enter_button {
         width: 60%;
-
     }
 }
 
-@media screen and (max-width: 500px) {
-    #user {
-
-        width: 80%;
-
-    }
-
-    #password {
-
-        width: 80%;
-
-    }
-
-    #enter_button {
-        width: 80%;
-
-    }
-}

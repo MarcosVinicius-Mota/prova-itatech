@@ -9,17 +9,6 @@ function createProduct(_name, _category, _price, image_src) {
     return product;
 }
 
-function __appendElements(main_element, child){
-    main_element.appendChild(child);
-}
-
-function __updateContentText(element, newText){
-    element.textContent = newText;
-}
-
-function __createElement(element_tag){
-    return document.createElement(element_tag);
-}
 
 function appendElement(element_id, product, is_visible){
     var section = document.getElementById(element_id);
@@ -90,5 +79,6 @@ function main(){
     appendElementArray("second_section", secondSec, 6, 4);
     appendElementArray("third_section", thirdSec, 6, 4);
 }
+
 
 main();

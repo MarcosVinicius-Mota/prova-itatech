@@ -8,6 +8,11 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="tabletstyle.css">
+    <link rel="stylesheet" href="mobilestyle.css">
+
+    <script type="text/javascript" src="scripts.js"></script>
+
 
 </head>
 
@@ -16,7 +21,7 @@
 
     <header>
         <div>
-            <img src="images/Itatech.png" alt="itatechjr" class="logo">
+            <a href="index.html"><img src="images/Itatech.png" alt="itatechjr" class="logo"></a>
         </div>
 
         <div id="search_div">
@@ -31,16 +36,15 @@
         <div id="login_div">
             <p><strong>Iniciar seção</p></strong></p>
 
-            <form method="get">
+            <form method="">
 
                 <div id="get_login">
                     <input type="text" id="user" placeholder="Login">
                 </div>
 
                 <input type="password" placeholder="Senha" id="password">
-                <a href="index.html">
-                    <input type="button" id="enter_button" value="Entrar">
-                </a>
+                <input type="button" id="enter_button" value="Entrar" onclick="confirmLogin()">
+
 
             </form>
         </div>
@@ -53,18 +57,14 @@
 
         <img src="images/Itatech.png" alt="itatechjr" class="logo" id="footer_logo">
 
-        <div id="services">
-
-            <ul>
+            <div class="list">
                 <li>Quem Somos</li>
                 <li>Políticas de<br>privacidade</li>
                 <li>Programa de fidelidade</li>
                 <li>Novas Tendencias</li>
                 <li>Quero ser franquiciado</li>
                 <li>Anúncie aqui</li>
-            </ul>
-
-        </div>
+            </div>
 
         <div id="send_msg">
             <p style="color: #464646;"><strong>Fale conosco</strong></p>
@@ -78,7 +78,8 @@
                 <div id="msg_div">
                     <textarea id="message" placeholder="Escreva sua mensagem"></textarea>
                 </div>
-                <input type="button" id="send_button" value="Enviar Mensagem">
+                <input type="button" id="send_button" value="Enviar Mensagem" onclick="sendMessage()">
+
 
             </form>
 

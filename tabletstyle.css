@@ -1,0 +1,44 @@
+@media screen and (max-width: 900px) {
+    .invisible {
+        visibility: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    section {
+        position: relative;
+        padding: 0;
+        width: 90%;
+        margin-top: 22px;
+        margin-left: 5%;
+        justify-content: space-between;
+    }
+
+    .list {
+        position: absolute;
+        margin-top: 40px;
+        left: 5%;
+    }
+
+    li {
+        color: #464646;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #send_msg {
+        position: absolute;
+        padding-left: 45%;
+        padding-top: 200px;
+        width: 50%;
+    }
+
+
+    #send_button {
+        min-width: 150px;
+    }
+
+
+}
+

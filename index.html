@@ -7,12 +7,11 @@
 
 
     <link rel="stylesheet" href="style.css">
-    <script>
-        function youCantSeeMore(){
-            alert("Não há mais produtos")
-        }
+    <link rel="stylesheet" href="tabletstyle.css">
+    <link rel="stylesheet" href="mobilestyle.css">
 
-    </script>
+
+    <script type="text/javascript" src="scripts.js"></script>
 
 </head>
 
@@ -21,13 +20,26 @@
 
     <header>
         <div>
-            <img src="images/Itatech.png" alt="itatechjr" class="logo">
+            <a href="index.html"><img src="images/Itatech.png" alt="itatechjr" class="logo"></a>
         </div>
 
         <div id="search_div">
             <input type="text" placeholder="Search" id="search_bar">
-            <img src="images/search.png" alt="search" id="search_button">
+            <img src="images/search.png" alt="search" id="search_button" onclick="youCantSearchForItens()">
         </div>
+
+        <script>
+            document.getElementById('search_bar').addEventListener('keyup', function(event) {
+            
+            if (event.code === 'Enter')
+            {
+                youCantSearchForItens();
+            }
+            });
+
+        </script>
+
+        
 
         <div id="login_button_div">
             <a href="login.html">
@@ -46,7 +58,7 @@
             <strong>Produtos selecionados com 33% de desconto</strong>
         </div>
         <div id="title_button_div">
-            <input type="button" value="Ver Consoles" id="title_button">
+            <input type="button" value="Ver Consoles" id="title_button" onclick="__viewCategory(document.getElementById('second_section'))">
         </div>
     </div>
 
@@ -97,7 +109,7 @@
                 <div id="msg_div">
                     <textarea id="message" placeholder="Escreva sua mensagem"></textarea>
                 </div>
-                <input type="button" id="send_button" value="Enviar Mensagem">
+                <input type="button" id="send_button" value="Enviar Mensagem" onclick="sendMessage()">
 
             </form>
 
@@ -109,6 +121,7 @@
         Desenvolvido por Marcos Vinicius Mota Menezes <br>
         2022
     </div>
+
 
 
 </body>
