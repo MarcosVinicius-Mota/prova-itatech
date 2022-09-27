@@ -18,7 +18,6 @@
 
 <body>
 
-
     <header>
         <div>
             <a href="index.html"><img src="images/Itatech.png" alt="itatechjr" class="logo"></a>
@@ -26,9 +25,15 @@
 
         <div id="search_div">
             <input type="text" placeholder="Search" id="search_bar">
-            <img src="images/search.png" alt="seach" id="search_button">
+            <img src="images/search.png" alt="search" id="search_button" onclick="alert('Infelizmente você terá que voltar para a página inicial do site para acessar esse recurso.')">
         </div>
 
+    
+        <div id="login_button_div">
+            <a href="login.html">
+                <input type="button" value="LOGIN" id="login_button">
+            </a>
+        </div>
     </header>
 
 
@@ -43,6 +48,26 @@
                 </div>
 
                 <input type="password" placeholder="Senha" id="password">
+
+                <script>
+                    document.getElementById('password').addEventListener('keyup', function(event) {
+                    
+                    if (event.code === 'Enter')
+                    {
+                        confirmLogin();
+                    }
+                    });
+
+                    document.getElementById('user').addEventListener('keyup', function(event) {
+                    
+                    if (event.code === 'Enter')
+                    {
+                        confirmLogin();
+                    }
+                    });
+        
+                </script>
+
                 <input type="button" id="enter_button" value="Entrar" onclick="confirmLogin()">
 
 
