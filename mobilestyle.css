@@ -1,6 +1,7 @@
 
 @media screen and (max-width: 500px) {
 
+    /*espaçamento maior entre as linhas*/
     .product_div {
         padding-bottom: 50px;
         width: 45%;
@@ -13,8 +14,9 @@
 
     section {
         display: flex;
+        /*O conteudo vai pra linha de baixo em telas menores*/
         flex-wrap: wrap;
-    }
+    }   
 
     header {
         width: 100%;
@@ -22,15 +24,16 @@
         left: 0px;
     }
 
+    /*Botão de pesquisa vai para a direita*/
     #search_div {
-
         background-color: white;
         width: 10%;
         border-radius: 15px;
         position: absolute;
         left: 85%;
-
     }
+
+    /*botão de login vem para a esquerda*/
 
     #login_button_div {
         width: 35%;
@@ -38,20 +41,22 @@
         left: 43%;
     }
 
+    /*Esconde por definitivo a barra de pesquisa (assim, não é possível se divertir pesquisando coisa e recebendo aviso)*/
     #search_bar {
         visibility: hidden;
     }
 
+    /*aumenta o tamanho do HERO*/
     #page_title {
         height: 230px;
     }
+
 
     #title_button_div {
         padding: 20px;
         width: 35%;
         height: 40px;
     }
-
 
     #titleh1 {
         font-size: 22pt;
@@ -84,21 +89,4 @@
         width: 50%;
         padding-left: 25%;
     }
-
-    #user {
-        width: 80%;
-    }
-
-    #password {
-
-        width: 80%;
-
-    }
-
-    #enter_button {
-        width: 80%;
-
-    }
-
-
 }

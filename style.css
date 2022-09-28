@@ -5,7 +5,6 @@ html {
     padding: 0;
     margin: 0;
     background-color: white;
-
 }
 
 p {
@@ -17,9 +16,12 @@ div {
 }
 
 header {
+    /*tudo na mesma linha*/
     display: flex;
+    
     align-items: center;
     justify-content: left;
+
     margin-left: 10%;
     width: 80%;
     max-width: 1300px;
@@ -28,32 +30,26 @@ header {
 }
 
 a {
+    /*remoção do underline dos links*/
     text-decoration: none;
     color: #2A7AE4;
 }
 
-.center {
-    display: block;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 50%;
-}
-
+/*imagem do botão pesuisa*/
 #search_button {
     height: 50%;
     width: 20px;
     position: absolute;
     top: 25%;
     right: 5px;
-
 }
 
+/*Cor dos textos padrões das caixas de texto*/
 ::placeholder {
     color: #A2A2A2;
 }
 
 #search_bar {
-
     background-color: #F5F5F5;
     border-radius: 15px;
     height: 38px;
@@ -61,12 +57,13 @@ a {
     border: 0;
     outline: 0px;
     position: absolute;
+    /*distacia de 5px da imagem*/
     left: 5px;
     color: #A2A2A2;
 }
 
+/*div que engloba a imagem e a caixa de texto*/
 #search_div {
-
     background-color: #F5F5F5;
     align-items: center;
     height: 40px;
@@ -89,28 +86,32 @@ img {
     height: 100%;
     color: #2A7AE4;
     border-color: #2A7AE4;
+    /*efeito de hover um pouco mais lento*/
     transition: 0.6s;
 }
 
+/*ao colocar o mouse no botão de login, ele fica um pouco mais escuro*/
 #login_button:hover {
     background-color: #e7e7e7;
 }
 
+/*div que o botão de login está dentro*/
 #login_button_div {
 
     position: absolute;
     right: 10%;
     width: 16%;
     height: 45px;
-    background-color: white;
 
 }
 
-
+/*div do HERO*/
 #page_title {
     color: white;
     display: flex;
+    /*elementos distribuidos de cima pra baixo*/
     flex-direction: column;
+    /*elementos na parte de baixo da div*/
     justify-content: end;
     background-image: url("images/hero.jfif");
     background-size: 100%;
@@ -119,24 +120,27 @@ img {
     height: 250px;
 }
 
+/*FEVEREIRO PROMOCIONAL*/
 #titleh1 {
     font-size: 32pt;
     font-family: Arial, Helvetica, sans-serif;
-
     padding: 20px;
 }
 
+/*Produtos selecionados com 33% de desconto*/
 #title_text {
     padding-left: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*div do botão ver consoles*/
 #title_button_div {
     padding: 20px;
     width: 120px;
     height: 35px;
 }
 
+/*botão de ver consoles*/
 #title_button {
     background-color: #2A7AE4;
     color: white;
@@ -145,22 +149,23 @@ img {
     height: 100%;
 }
 
+/*tamanho das imagens de produto. Classe carregada lá no js*/
 .product_image {
     height: 125px;
     width: 125px;
 }
 
-
-
+/*seções de produtos*/
 section {
     width: 92%;
     padding: 4%;
     padding-top: 2%;
     display: flex;
+    /*Espaço entre cada elemento e centralizados*/
     justify-content: space-between;
 }
 
-
+/*Nome das categorias. Poderia muito bem ser uma classe, mas como esses IDS são carregados no JS, o uso de classes causaria inconsistencias*/
 #title1 {
     padding-left: 4%;
     margin-top: 15px;
@@ -185,6 +190,7 @@ section {
     color: #464646;
 }
 
+/*botão ver mais*/
 .see_more {
     position: absolute;
     right: 6%;
@@ -192,6 +198,7 @@ section {
     color: #2A7AE4;
 }
 
+/**rodape*/
 footer {
     background-color: #EAF2FD;
     height: 350px;
@@ -201,27 +208,33 @@ footer {
 
 }
 
+/*div com os contatos*/
 .list {
     padding-top: 30px;
+    /*remoção do ponto dos elemtosda lisa*/
     list-style: none;
 }
 
+/*lista não ordenada*/
 li {
     color: #464646;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*div onde tem a lista com os contatos / serviços*/
 #services {
     padding-top: 32px;
     margin-left: 5%;
 }
 
+/*logo do rodape*/
 #footer_logo {
     padding-top: 45px;
     margin-left: 10%;
 }
 
+/*div com o form fale conosco*/
 #send_msg {
     margin-left: 3%;
     align-self: center;
@@ -235,12 +248,15 @@ form {
     justify-content: start;
 }
 
+/*caixa com o nome do usuario*/ 
 #name {
     outline: 0px;
     border: none;
     height: 100%;
     padding-left: 13px;
 }
+
+/*div com o texto "Nome" e a caixa logo abaixo*/
 
 #get_name {
     margin-top: 5%;
@@ -252,6 +268,7 @@ form {
     width: 100%;
 }
 
+/*Área de texto da mensagem*/
 #message {
     margin-top: 4%;
     font-family: Arial, Helvetica, sans-serif;
@@ -263,6 +280,7 @@ form {
     border: 0;
 }
 
+/*botão de enviar mensagem*/
 #send_button {
     margin-top: 5%;
     width: 35%;

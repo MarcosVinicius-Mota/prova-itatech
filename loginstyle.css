@@ -2,8 +2,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*ID da div principal da página de login*/
 #login_div {
-
     margin-left: 15%;
     margin-top: 60px;
     background-color: #E5E5E5;
@@ -12,14 +12,16 @@ body {
     text-align: center;
 }
 
+/*caixa onde a div de login está localizada*/
 #box {
     width: 100%;
     background-color: #E5E5E5;
 }
 
-
+/*Campo do usuário*/
 #user {
     margin-top: 22px;
+    /*remoção da borda preta ao clicar*/
     outline: 0;
     height: 50px;
     width: 40%;
@@ -53,6 +55,7 @@ footer {
     margin-top: 0%;
 }
 
+/*Em telas menores, os campos aumentam de tamanho*/
 @media screen and (max-width: 900px) {
     #user {
         width: 60%;

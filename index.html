@@ -3,34 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>
+        Itatech Sr
+    </title>
 
 
+    <!--Link dos arquivos de estilo-->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="tabletstyle.css">
     <link rel="stylesheet" href="mobilestyle.css">
 
-
+    <!--Carregamentos de algumas funções de interação da página-->
     <script type="text/javascript" src="scripts.js"></script>
 
 </head>
 
 <body>
 
-
+    <!--Cabeçalho da página, onde temos a logo, barra de pesquisa e botão de login-->
     <header>
+        <!--Div resposável por guardar a imagem-->
         <div>
             <a href="index.html"><img src="images/Itatech.png" alt="itatechjr" class="logo"></a>
         </div>
-
+        <!--Div responsável pela caixa de busca-->
         <div id="search_div">
             <input type="text" placeholder="Search" id="search_bar">
             <img src="images/search.png" alt="search" id="search_button" onclick="youCantSearchForItens()">
         </div>
 
+        <!--Adicionando um evento ao clicar enter na barra de pesquisa-->
         <script>
-            document.getElementById('search_bar').addEventListener('keyup', function(event) {
-            
+            document.getElementById('search_bar').addEventListener('keyup', /*Função anonima*/function(event) {
             if (event.code === 'Enter')
             {
                 youCantSearchForItens();
@@ -40,16 +44,16 @@
         </script>
 
         
-
+        <!--Div responsável por guardar o botão de login-->
         <div id="login_button_div">
             <a href="login.html">
                 <input type="button" value="LOGIN" id="login_button">
             </a>
         </div>
-    </header>
+    </header> 
 
 
-    <!--AQUI VAI ENTRAR A MAIS INSANA IMAGEM DO MUNDO-->
+    <!--AQUI VAI ENTRAR A MAIS INSANA IMAGEM DO MUNDO, TBM CONHECIDA POR HERO <n sei pq hero>-->
     <div id="page_title">
         <div id="titleh1">
             <strong>Fevereiro Promocional</strong>
@@ -58,34 +62,45 @@
             <strong>Produtos selecionados com 33% de desconto</strong>
         </div>
         <div id="title_button_div">
+            <!--Chamada da função __viewCategory("consoles") ao clicar no botão-->
             <input type="button" value="Ver Consoles" id="title_button" onclick="__viewCategory(document.getElementById('second_section'))">
         </div>
     </div>
 
+
+    <!--As seguintes linhas são as seções dos produtos, há 3 dessas totalmente iguais, mudando apenas o ID-->    
     <div id="title1"></div>
-    <div class="see_more" onclick="youCantSeeMore()">Ver mais</div>
+    <div class="see_more" onclick="youCantSeeMore()">
+        Ver mais
+    </div>
+
     <section id="first_section">
 
     </section>
 
     <div id="title2"></div>
-    <div class="see_more" onclick="youCantSeeMore()">Ver mais</div>
-    <section id="second_section">
 
+    <div class="see_more" onclick="youCantSeeMore()">
+        Ver mais
+    </div>
+    <section id="second_section">
+        
     </section>
 
     <div id="title3"></div>
-    <div class="see_more" onclick="youCantSeeMore()">Ver mais</div>
+    <div class="see_more" onclick="youCantSeeMore()">
+        Ver mais
+    </div>
     <section id="third_section">
 
     </section>
 
-
-
+    <!--Esse arquivo JS contém o carregamento de imagens, atribuição dos nomes dos produtos e preço-->
     <script type="text/javascript" src="elementCreator.js"></script>
 
-    <footer>
 
+    <!--Rodapé-->
+    <footer>
         <img src="images/Itatech.png" alt="itatechjr" class="logo" id="footer_logo">
 
             <div class="list">
@@ -97,15 +112,18 @@
                 <li>Anúncie aqui</li>
             </div>
 
+        <!--Div para guardar o formulário de envio de mensagem-->
         <div id="send_msg">
-            <p style="color: #464646;"><strong>Fale conosco</strong></p>
-
+            <p style="color: #464646;"> <!--por se tratar de uma tag única, o estilo dela foi feito inline-->
+                <strong>Fale conosco</strong>
+            </p>
             <form action="index.html">
+                <!--Essa div tem o nome e a caixa de nome como o mesmo background color para parecer que é tudo igual-->
                 <div id="get_name">
                     <div style="padding-left: 13px">Nome</div>
                     <input type="text" id="name">
                 </div>
-
+                <!--Caixa de texto com a mensagem-->
                 <div id="msg_div">
                     <textarea id="message" placeholder="Escreva sua mensagem"></textarea>
                 </div>
@@ -118,7 +136,7 @@
     </footer>
 
     <div style="width: 100%;height: 75px; text-align: center;font-size: 15pt; margin-top: 15px;">
-        Desenvolvido por Marcos Vinicius Mota Menezes <br>
+        Desenvolvido por Marcos Vinicius Mota Menezes <br> <!--O BRABO-->
         2022
     </div>
 
